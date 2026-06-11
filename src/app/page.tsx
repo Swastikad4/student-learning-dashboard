@@ -28,7 +28,7 @@ async function getCourses(): Promise<Course[]> {
     .limit(4);
 
   if (error) {
-    console.error("Error fetching courses:", error);
+    console.error("Error fetching courses:", error.message || error);
     return [];
   }
 

@@ -25,7 +25,7 @@ async function getCourses(): Promise<Course[]> {
     .order('created_at', { ascending: false });
 
   if (error) {
-    console.error("Error fetching courses:", error);
+    console.error("Error fetching courses:", error.message || error);
     return [];
   }
 
